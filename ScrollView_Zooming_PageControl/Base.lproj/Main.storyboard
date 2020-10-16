@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScrollView_Zooming_PageControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="hEd-an-RCr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rDt-h1-hK9">
+                                        <rect key="frame" x="0.0" y="0.0" width="1656" height="896"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avengers1" translatesAutoresizingMaskIntoConstraints="NO" id="f0Z-C4-lP3">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avengers2" translatesAutoresizingMaskIntoConstraints="NO" id="D0x-51-v6j">
+                                                <rect key="frame" x="414" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avengers3" translatesAutoresizingMaskIntoConstraints="NO" id="59W-9f-h2U">
+                                                <rect key="frame" x="828" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avengers4" translatesAutoresizingMaskIntoConstraints="NO" id="KcH-XW-tM4">
+                                                <rect key="frame" x="1242" y="0.0" width="414" height="896"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rDt-h1-hK9" firstAttribute="trailing" secondItem="14N-iX-NA2" secondAttribute="trailing" id="2Qh-Oh-xyQ"/>
+                                    <constraint firstItem="rDt-h1-hK9" firstAttribute="top" secondItem="14N-iX-NA2" secondAttribute="top" id="DW3-iQ-glo"/>
+                                    <constraint firstItem="rDt-h1-hK9" firstAttribute="leading" secondItem="14N-iX-NA2" secondAttribute="leading" id="GUI-B9-if0"/>
+                                    <constraint firstItem="f0Z-C4-lP3" firstAttribute="height" secondItem="2g3-uT-JhG" secondAttribute="height" multiplier="1:1" id="dt5-VU-4B6"/>
+                                    <constraint firstItem="rDt-h1-hK9" firstAttribute="bottom" secondItem="14N-iX-NA2" secondAttribute="bottom" id="mrc-wa-JYI"/>
+                                    <constraint firstItem="f0Z-C4-lP3" firstAttribute="width" secondItem="2g3-uT-JhG" secondAttribute="width" multiplier="1:1" id="u2M-FW-0PK"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="14N-iX-NA2"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="2g3-uT-JhG"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="g0T-sS-DJw"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="c2Y-mN-jEg">
+                                <rect key="frame" x="136.5" y="768.5" width="141" height="27.5"/>
+                                <color key="backgroundColor" white="1" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="pageIndicatorTintColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="pageChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Jgk-yG-ZaU"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hEd-an-RCr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BO4-qC-qeg"/>
+                            <constraint firstItem="hEd-an-RCr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CKx-qo-lBj"/>
+                            <constraint firstAttribute="bottom" secondItem="c2Y-mN-jEg" secondAttribute="bottom" constant="100" id="N6B-g0-hPa"/>
+                            <constraint firstAttribute="trailing" secondItem="hEd-an-RCr" secondAttribute="trailing" id="iwc-Gm-T6b"/>
+                            <constraint firstItem="c2Y-mN-jEg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nnr-Es-eaH"/>
+                            <constraint firstAttribute="bottom" secondItem="hEd-an-RCr" secondAttribute="bottom" id="uj4-Vi-L0X"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="f0Z-C4-lP3" id="pbi-Ur-hgw"/>
+                        <outlet property="pageControl" destination="c2Y-mN-jEg" id="nu6-tk-ja2"/>
+                        <outlet property="scrollView" destination="hEd-an-RCr" id="4h6-Ic-3eX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="avengers1" width="500" height="740"/>
+        <image name="avengers2" width="1100" height="1629"/>
+        <image name="avengers3" width="1707" height="2560"/>
+        <image name="avengers4" width="1200" height="1627"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
